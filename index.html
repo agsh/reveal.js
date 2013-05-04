@@ -57,14 +57,61 @@
 				</section>
 				<section>
 					<h3>история</h3>
+					<p>
 					<script>
 						document.write((new Date(1995, 4, 4, 13, 13, 13)).toString());
 					</script>
+					</p>
+					<p>Брендан Айк, Netscape.</p>
+					<p>Единственный, который может называть javascript javascript'ом, а не ECMAscript'ом</p>
 				</section>
-				
-				
-				
-				
+				<section>
+					<h3>история</h3>
+					<p>
+					<script>
+						document.write(new Date(1996, 1, 1).toString());
+					</script>
+					</p>
+					<p>JScript, Microsoft</p>
+					<p>javascript - Oracle</p>
+				</section>
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ### замыкания
+                            ``` javascript
+                            var fn = function(smth) {
+                                var thing = 42;
+                                return function(another) {
+                                    console.log(thing);
+                                }
+                            };
+                            fn()();
+                            ```
+                        </script>
+                    </section>
+                </section>
+                <section>
+                    <h3>каррирование</h3>
+                    <ol>
+                        <li>классическое</li>
+                        <li>частичное применение функции</li>
+                    </ol>
+                </section>
+                <section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            ###классическое
+                            ```javacript
+                                function() {}
+
+
+                            ```
+                        </script>
+                    </section>
+                </section>
+
+
 				<section>
 					<h1>Reveal.js</h1>
 					<h3>HTML Presentations Made Easy</h3>
