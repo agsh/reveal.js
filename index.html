@@ -91,26 +91,81 @@
                         </script>
                     </section>
                 </section>
-                <section>
-                    <h3>каррирование</h3>
-                    <ol>
-                        <li>классическое</li>
-                        <li>частичное применение функции</li>
-                    </ol>
-                </section>
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ###классическое
-                            ```javacript
-                                function() {}
 
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###каррирование
+							####"классическое"
+							Haskell
+							``` haskell
+							add = \a -> \b -> a + b
+							add = \a b -> a + b
+							add a b = a + b -- сахар
+							inc x = add 1 x
+							inc = add 1
+							inc 4 -- 5
+							```
+							Javascript
+							``` javascript
+							function add(x) {
+							  return function(y) {
+							    return x + y;
+							  }
+							}
+							inc = add(1);
+							inc(4); // 5
+							add(4)(1);
+							```
+						</script>
+					</section>
+				</section>
 
-                            ```
-                        </script>
-                    </section>
-                </section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###каррирование
+							####Сахар
+							Javascript
+							``` javascript
+							let add = (x) => (y) => {return x + y}; -- ECMAScript 6
+							let add = (x) => (y) => x + y; -- firefox only
+							inc = add(1);
+							inc(4); // 5
+							add(4)(1); // 5
+							```
+							Coffeescript
+							``` coffeescript
+							add = (x) -> (y) -> x + y
+							inc = add 1
+							inc 4 # 5
+							add 4, 1 # 5
+							```
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
 
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###деструктуризация
+							Haskell
+							``` haskell
+							[a, b] = [1, 3] -- a == 1, b == 3
+							[a, b] = [b, a] -- a == 3, b == 1
+							```
+							Coffeescript
+							``` coffeescript
+							add = (x) -> (y) -> x + y
+							inc = add 1
+							inc 4 # 5
+							add 4, 1 # 5
+							```
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
 
 				<section>
 					<h1>Reveal.js</h1>
