@@ -51,8 +51,8 @@
 						<li class="fragment">со слабой типизацией</li>
 						<li class="fragment">без классов</li>
 						<li class="fragment">без модулей</li>
+						<li class="fragment">однопоточный</li>
 						<li class="fragment">но функциональный</li>
-						<li class="fragment">и со сборщиком мусора</li>
 					</ol>
 				</section>
 				<section>
@@ -95,13 +95,13 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###каррирование
+							###каррированные функции
 							####"классическое"
 							Haskell
 							``` haskell
 							add = \a -> \b -> a + b
 							add = \a b -> a + b
-							add a b = a + b -- сахар
+							add a b = a + b -- на уровне языка
 							inc x = add 1 x
 							inc = add 1
 							inc 4 -- 5
@@ -124,7 +124,7 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###каррирование
+							###каррированные функции
 							####Сахар
 							Javascript
 							``` javascript
@@ -149,18 +149,119 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###деструктуризация
+							###каррирование, общий случай
+							Haskell
+							``` haskell
+							curry :: ((a, b) -> c) -> a -> b -> c
+							curry f x y =  f (x, y)
+
+							uncurry :: (a -> b -> c) -> ((a, b) -> c)
+							uncurry f p =  f (fst p) (snd p)
+							```
+							Javascript
+							``` javascript
+							var curry = function(f) {
+							  return function(a) {
+							    return function(b) {
+							      return f(a,b);
+							    }
+							  }
+							}
+							```
+							А больше двух аргументов?
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###каррирование, общий случай
+							Livescript
+							``` javascript
+							function curry$(f, bound){
+							  var context,
+							  _curry = function(args) {
+							    return f.length > 1 ? function(){
+							      var params = args ? args.concat() : [];
+							      context = bound ? context || this : this;
+							      return params.push.apply(params, arguments) <
+							          f.length && arguments.length ?
+							        _curry.call(context, params) : f.apply(context, params);
+							    } : f;
+							  };
+							  return _curry();
+							}
+							```
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###каррирование, общий случай
+
+							``` javascript
+							var curry = function(fun) {
+							  return function(a) { // возвращаем функцию от одного параметра
+							    if (fun.length == 1) {
+							      return fun.call(null, a);
+							    } else {
+							      return curry(fun.bind(null, a)); // рекурсия!
+							    }
+							  }
+							};
+
+							var sum4 = function(a, b, c, d) { return a + b + c + d;	};
+
+                            var csum4 = curry(sum4);
+
+							sum4(1,2,3,4); // 10
+							csum4(1)(2)(3)(4); // 10
+							```
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###каррирование, общий случай
+
+							- любая функция только от одного аргумента
+							- нативный вариант с частичной применимостью лучше
+
+							``` javascript
+							console.log(csum4.length); // 1
+							console.log(csum4(1).length); // 1
+							console.log(csum4(1)(2).length); // 1
+							console.log(csum4(1)(2)(3)(4).length); // undefined, это уже не функция
+
+							csum3 = csum4(0);
+							sum3 = sum4.bind(null, 0);
+							```
+							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+						</script>
+					</section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							###деструктивное присваивание
 							Haskell
 							``` haskell
 							[a, b] = [1, 3] -- a == 1, b == 3
 							[a, b] = [b, a] -- a == 3, b == 1
 							```
-							Coffeescript
+							Javascript, ECMA-6
 							``` coffeescript
-							add = (x) -> (y) -> x + y
-							inc = add 1
-							inc 4 # 5
-							add 4, 1 # 5
+							[a, b] = [1, 3] // a == 1, b == 3
+							[a, b] = [b, a] // a == 3, b == 1
 							```
 							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
 						</script>
