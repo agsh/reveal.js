@@ -2,25 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68daa4db-44a9-4c51-b87e-d75d69a2340d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/curring.hs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/curry1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/eval.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/lexical.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/reduce.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan" afterPath="$PROJECT_DIR$/plan" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="reveal.js.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368006332184" ignored="false" />
-    <file path="$PROJECT_DIR$/../boobst/package.json" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367840982260" ignored="false" />
-    <file path="$PROJECT_DIR$/../boobst/test/test.set.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367844580105" ignored="false" />
+    <file path="/Dummy.txt" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369234276336" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/package.json" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368535813444" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/test/test.set.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368534648615" ignored="false" />
     <file path="/test.set.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367841013915" ignored="false" />
-    <file path="/index.html" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368019315389" ignored="false" />
+    <file path="/index.html" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369237007971" ignored="false" />
     <file path="/dummy.xml" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367920774091" ignored="false" />
-    <file path="/plan" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368017255689" ignored="false" />
-    <file path="$PROJECT_DIR$/../boobst/boobst.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367935591499" ignored="false" />
+    <file path="/plan" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368729817492" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/boobst.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368535804003" ignored="false" />
     <file path="/eval.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368012561112" ignored="false" />
     <file path="/curry1.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368018618285" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/test/test.order.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368550262583" ignored="false" />
+    <file path="/test.order.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368550262147" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/test/test.order.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368531703704" ignored="false" />
+    <file path="/boobst.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368533567464" ignored="false" />
+    <file path="$PROJECT_DIR$/../upg/upg/cdcom/mapObjects.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368624090795" ignored="false" />
+    <file path="$PROJECT_DIR$/../upg/upg/cdcom/mapObjects.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368625390204" ignored="false" />
+    <file path="$PROJECT_DIR$/../upg/phoneGrabber.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368530763551" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/test/test.config.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368532765205" ignored="false" />
+    <file path="/test.config.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368532739280" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/boobst.cos" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368632526247" ignored="false" />
+    <file path="$PROJECT_DIR$/../boobst/Readme.md" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368534346515" ignored="false" />
+    <file path="/Readme.md" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368534275366" ignored="false" />
+    <file path="/mapObjects.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368624082206" ignored="false" />
+    <file path="$PROJECT_DIR$/../upg/upg/cdcom/convertBuilding.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368624107888" ignored="false" />
+    <file path="/lexical.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369236642751" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +57,42 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="52" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.09787736">
+            <state line="178" column="38" selection-start="4924" selection-end="4924" vertical-scroll-proportion="0.5160142">
               <folding>
-                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#9;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#16;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plan" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plan">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="27" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lexical.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/lexical.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="59" selection-end="162" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#57#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="curring.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -72,31 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curring.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="plan" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="19" selection-start="573" selection-end="583" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="eval.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sorces/eval.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#57#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -126,9 +149,11 @@
       <list>
         <option value="$PROJECT_DIR$/sorces/curring.coffee" />
         <option value="$PROJECT_DIR$/sorces/eval.js" />
-        <option value="$PROJECT_DIR$/plan" />
         <option value="$PROJECT_DIR$/sorces/curry1.js" />
+        <option value="$PROJECT_DIR$/plan" />
+        <option value="$PROJECT_DIR$/sorces/lexical.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/sorces/reduce.js" />
       </list>
     </option>
   </component>
@@ -188,6 +213,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,17 +248,19 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="settings" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sorces/lexical.js" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.lexical.js">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -251,7 +279,14 @@
       </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <list size="0" />
+    <configuration default="false" name="lexical.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/bin/node" path-to-js-file="sorces/lexical.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.lexical.js" />
+    </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
@@ -264,7 +299,11 @@
       <created>1367942458339</created>
       <updated>1367942458339</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="123">
+      <created>1368021123010</created>
+      <updated>1368021123010</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -273,17 +312,17 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17343174" sideWeight="0.67031765" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17343174" sideWeight="0.67103827" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32896176" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -352,14 +391,28 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/plan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="19" selection-start="573" selection-end="583" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/eval.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#9;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#16;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -389,40 +442,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#9;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#16;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sorces/eval.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#57#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sorces/curring.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="19" selection-start="573" selection-end="583" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -436,6 +473,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sorces/curring.hs">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/lexical.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="0" selection-start="59" selection-end="162" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#57#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plan">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="27" selection-start="849" selection-end="849" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/reduce.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
@@ -443,12 +508,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="52" selection-start="1800" selection-end="1800" vertical-scroll-proportion="0.09787736">
+        <state line="178" column="38" selection-start="4924" selection-end="4924" vertical-scroll-proportion="0.5160142">
           <folding>
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#6;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#7;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#9;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#section#0;n#section#8;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#14;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#15;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#script#0;n#section#0;n#section#16;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
