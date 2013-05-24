@@ -159,6 +159,7 @@
 							<li>indexOf</li>
 							<li>lastIndexOf</li>
 						</ul>
+						не параллелятся
 						<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
 					</section>
 				</section>
@@ -166,27 +167,31 @@
 				<section>
 					<section data-markdown>
 						<script type="text/template">
-							###каррированные функции
-							####"классическое"
+							###Пример
 							Haskell
 							``` haskell
-							add = \a -> \b -> a + b
-							add = \a b -> a + b
-							add a b = a + b -- на уровне языка
-							inc x = add 1 x
-							inc = add 1
-							inc 4 -- 5
+							foldl1 (\a b->a + b) [1..5]
 							```
+
+							F#
+							```fsharp
+							List.reduce (fun a b -> a + b) [1..5]
+							```
+
 							Javascript
 							``` javascript
-							function add(x) {
-							return function(y) {
-							return x + y;
-							}
-							}
-							inc = add(1);
-							inc(4); // 5
-							add(4)(1);
+							[1,2,3,4,5].reduce(function(a,b){return a + b;});
+							[1,2,3,4,5].reduce(function(a,b) a + b); // ff only
+							```
+
+							Coffeescript
+							``` coffeescript
+							[1..5].reduce (a,b) -> a+b
+							```
+
+							Underscore
+							``` javascript
+							_.reduce(_.range(5), function(memo, num){ return memo + num; }, 0);
 							```
 						</script>
 					</section>
