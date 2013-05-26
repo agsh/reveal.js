@@ -1,413 +1,767 @@
-﻿b<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+	<title>Функциональное программирование на javascript</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/reveal.min.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+	</script>
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section data-markdown>
+	<script type="text/template">
+		### Функциональное программирование на языке javascript
+		```javascript
+		var what = 'FP in javascript',
+			why = undefined,
+			who = 'Андрей Лаптев',
+			allTogether = [what, why, who];
+		console.log(function(){return allTogether.join(' ');}());
+		// будет много кода :(
+		```
+	</script>
+</section>
+
+<section>
+	<h3>история</h3>
+	<p>
 		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+			document.write((new Date(1995, 4, 4)).toString());
 		</script>
-
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
-
-	<body>
-
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section data-markdown>
-					<script type="text/template">
-						### Функциональное программирование на языке javascript
-						```javascript
-							console.log(function(){return 'hello!';}());
-							// будет много кода :(
-						```
-					</script>
-				</section>
-
-				<section>
-					<h3>история</h3>
-					<p>
-					<script>
-						document.write((new Date(1995, 4, 4, 13, 13, 13)).toString());
-					</script>
-					</p>
-					<p>Брендан Айк, Netscape.</p>
-					<p>Может называть javascript javascript'ом, а не ECMAscript'ом</p>
-				</section>
-
-				<section>
-					<h3>история</h3>
-					<p>
-					<script>
-						document.write(new Date(1996, 1, 1).toString());
-					</script>
-					</p>
-					<p>JScript, Microsoft</p>
-					<p>javascript - Oracle</p>
-				</section>
-
-				<section>
-					http://www.haskell.org/haskellwiki/The_JavaScript_Problem
-					<h3>JavaScript sucks.</h3>
-					<ul>
-						<li>нет модульной системы</li>
-						<li>слабая типизация</li>
-						<li>многословный синтаксис функций</li>
-						<li>позднее связывание IDE :(</li>
-						<li>привередливое сравнение WAT?</li>
-						<li>однопоточный</li>
-						<li class="fragment">но функциональный</li>
-					</ul>
-				</section>
-				<section>
-					<h3>javascript - функциональный?</h3>
-					убрать side-effects, т.е. следует избегать
-					<ol>
-						<li class="fragment">присваивания</li>
-						<li class="fragment">циклы, вместо них - рекурсия</li>
-						<li class="fragment">все объекты должны стать неизменяемыми</li>
-						<li class="fragment">убрать функции, не являющиеся математическими</li>
-					</ol>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							### Функция
-							javascript
-							``` javascript
-							function fn(smth) {
-								var magic = smth + 42;
-								return magic;
-							}
-
-							var fn = function(smth) {
-								var magic = smth + 42;
-								return magic;
-							}
-							```
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							### Функция
-							coffeescript
-							``` coffeescript
-							fn = (smth) ->
-								smth + 42
-							```
-						</script>
-					</section>
-				</section>
-
-                <section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ### замыкания
-	                        лексическая область видимости
-                            ``` javascript
-	                        var fn = function() {
-	                            var thing = 41;
-	                            return function() {
-	                                console.log(++thing);
-	                            }
-	                        }();
-	                        fn();
-	                        fn();
-                            ```
-                        </script>
-                    </section>
-                </section>
-
-				<section>
-					<section data-markdown>
-						<h3>ФВП</h3>
-						Массивы
-						<ul>
-							<li>forEach</li>
-							<li>every</li>
-							<li>some</li>
-							<li>map</li>
-							<li>filter</li>
-							<li>reduce</li>
-							<li>reduceRight</li>
-							<li>indexOf</li>
-							<li>lastIndexOf</li>
-						</ul>
-						не параллелятся
-						<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###Пример
-							Haskell
-							``` haskell
-							foldl1 (\a b->a + b) [1..5]
-							```
-
-							F#
-							```fsharp
-							List.reduce (fun a b -> a + b) [1..5]
-							```
-
-							Javascript
-							``` javascript
-							[1,2,3,4,5].reduce(function(a,b){return a + b;});
-							[1,2,3,4,5].reduce(function(a,b) a + b); // ff only
-							```
-
-							Coffeescript
-							``` coffeescript
-							[1..5].reduce (a,b) -> a+b
-							```
-
-							Underscore
-							``` javascript
-							_.reduce(_.range(5), function(memo, num){ return memo + num; }, 0);
-							```
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррированные функции
-							####"классическое"
-							Haskell
-							``` haskell
-							add = \a -> \b -> a + b
-							add = \a b -> a + b
-							add a b = a + b -- на уровне языка
-							inc x = add 1 x
-							inc = add 1
-							inc 4 -- 5
-							```
-							Javascript
-							``` javascript
-							function add(x) {
-							  return function(y) {
-							    return x + y;
-							  }
-							}
-							inc = add(1);
-							inc(4); // 5
-							add(4)(1);
-							```
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррированные функции
-							####Сахар
-							Javascript
-							``` javascript
-							let add = (x) => (y) => {return x + y}; -- ECMAScript 6
-							let add = (x) => (y) => x + y; -- firefox only
-							inc = add(1);
-							inc(4); // 5
-							add(4)(1); // 5
-							```
-							Coffeescript
-							``` coffeescript
-							add = (x) -> (y) -> x + y
-							inc = add 1
-							inc 4 # 5
-							add 4, 1 # 5
-							```
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррирование, общий случай
-							Haskell
-							``` haskell
-							curry :: ((a, b) -> c) -> a -> b -> c
-							curry f x y =  f (x, y)
-
-							uncurry :: (a -> b -> c) -> ((a, b) -> c)
-							uncurry f p =  f (fst p) (snd p)
-							```
-							Javascript
-							``` javascript
-							var curry = function(f) {
-							  return function(a) {
-							    return function(b) {
-							      return f(a,b);
-							    }
-							  }
-							}
-							```
-							А больше двух аргументов?
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррирование, общий случай
-							Livescript
-							``` javascript
-							function curry$(f, bound){
-							  var context,
-							  _curry = function(args) {
-							    return f.length > 1 ? function(){
-							      var params = args ? args.concat() : [];
-							      context = bound ? context || this : this;
-							      return params.push.apply(params, arguments) <
-							          f.length && arguments.length ?
-							        _curry.call(context, params) : f.apply(context, params);
-							    } : f;
-							  };
-							  return _curry();
-							}
-							```
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррирование, общий случай
-
-							``` javascript
-							var curry = function(fun) {
-							  return function(a) { // возвращаем функцию от одного параметра
-							    if (fun.length == 1) {
-							      return fun.call(null, a);
-							    } else {
-							      return curry(fun.bind(null, a)); // рекурсия!
-							    }
-							  }
-							};
-
-							var sum4 = function(a, b, c, d) { return a + b + c + d;	};
-
-                            var csum4 = curry(sum4);
-
-							sum4(1,2,3,4); // 10
-							csum4(1)(2)(3)(4); // 10
-							```
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###каррирование, общий случай
-
-							- любая функция только от одного аргумента
-							- нативный вариант с частичной применимостью лучше
-
-							``` javascript
-							console.log(csum4.length); // 1
-							console.log(csum4(1).length); // 1
-							console.log(csum4(1)(2).length); // 1
-							console.log(csum4(1)(2)(3)(4).length); // undefined, это уже не функция
-
-							csum3 = csum4(0);
-							sum3 = sum4.bind(null, 0);
-							```
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-				<section>
-					<section data-markdown>
-						<script type="text/template">
-							###деструктивное присваивание
-							Haskell
-							``` haskell
-							[a, b] = [1, 3] -- a == 1, b == 3
-							[a, b] = [b, a] -- a == 3, b == 1
-							```
-							Javascript, ECMA-6
-							``` coffeescript
-							[a, b] = [1, 3] // a == 1, b == 3
-							[a, b] = [b, a] // a == 3, b == 1
-							```
-							<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
-						</script>
-					</section>
-				</section>
-
-
-			</div>
-
-		</div>
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
+	</p>
+	<p>Брендан Айк, Netscape.</p>
+	<p>Может называть javascript javascript'ом, а не ECMAscript'ом</p>
+	<p>
 		<script>
+			document.write(new Date(1996, 1, 1).toString());
+		</script>
+	</p>
+	<p>JScript, Microsoft</p>
+	<p>javascript - Oracle</p>
+</section>
+<!--
+изначально скриптовый
+медленное развитие до 2000г.
+медленное развитие до ECMAScript Harmony
+движение не радикальное, а путём расширения
+все ли пишут на C# 1.0?
+-->
+<section>
+	<a href="http://www.haskell.org/haskellwiki/The_JavaScript_Problem">http://www.haskell.org/haskellwiki/The_JavaScript_Problem</a>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+	<h3>JavaScript sucks.</h3>
+	<ul>
+		<li>нет модульной системы</li>
+		<li>слабая типизация</li>
+		<li>многословный синтаксис функций</li>
+		<li>позднее связывание. IDE x_x</li>
+		<li>неадекватное сравнение. <a href="http://www.youtube.com/watch?v=kXEgk1Hdze0">WAT?</a></li>
+		<li>однопоточный</li>
+		<li class="fragment">но функциональный</li>
+		<li class="fragment">coffeescript? typescript?</li>
+	</ul>
+</section>
+<!-- многословный синтаксис функций -> C#, Java не в теме -->
+<section>
+	<h3>javascript - функциональный?</h3>
+	убрать side-effects, т.е. следует избегать
+	<ol>
+		<li class="fragment">присваивания</li>
+		<li class="fragment">циклы, вместо них - рекурсия</li>
+		<li class="fragment">все объекты должны стать неизменяемыми</li>
+		<li class="fragment">убрать функции, не являющиеся математическими</li>
+	</ol>
+</section>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			### Функция
+			javascript
+			``` javascript
+			function fn(smth) {
+				var magic = smth + 42;
+				return magic;
+			}
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
-					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
+			var fn = function(smth) {
+			var magic = smth + 42;
+				return magic;
+			}
+			```
+
+			coffeescript
+			``` coffeescript
+			fn = (smth) ->
+				smth + 42
+			```
+		</script>
+	</section>
+</section>
+<!-- вот она, многословность js -->
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			### замыкания
+			лексическая область видимости
+			``` javascript
+			var fn = function() {
+				var thing = 41;
+				return function() {
+					console.log(++thing);
+				}
+			}();
+			fn();
+			fn();
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<h3>ФВП</h3>
+		Массивы (списки)
+		<ul>
+			<li>.forEach</li>
+			<li>.every</li>
+			<li>.some</li>
+			<li>.map</li>
+			<li>.filter</li>
+			<li>.reduce</li>
+			<li>.reduceRight</li>
+			<li>.indexOf</li>
+			<li>.lastIndexOf</li>
+		</ul>
+		<span class="fragment">не параллелятся</span>
+		<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Пример
+			Haskell
+			``` haskell
+			foldl1 (\a b -> a + b) [1..5]
+			```
+
+			F#
+			```fsharp
+			List.reduce (fun a b -> a + b) [1..5]
+			```
+
+			Javascript
+			``` javascript
+			[1,2,3,4,5].reduce(function(a,b){return a + b;});
+			[1,2,3,4,5].reduce(function(a,b) a + b); // ff only
+			```
+
+			Coffeescript
+			``` coffeescript
+			[1..5].reduce (a,b) -> a + b
+			```
+
+			Underscore.js
+			``` javascript
+			_.reduce(_.range(5), function(memo, num){ return memo + num; }, 0);
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррированные функции
+			####"классическое"
+			Haskell
+			``` haskell
+			add = \a -> \b -> a + b
+			add = \a b -> a + b
+			add a b = a + b -- на уровне языка
+			inc x = add 1 x
+			inc = add 1
+			inc 4 -- 5
+			```
+			Javascript
+			``` javascript
+			function add(x) {
+				return function(y) {
+					return x + y;
+				}
+			}
+			inc = add(1);
+			inc(4); // 5
+			add(4)(1);
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррированные функции
+			####Сахар
+			Javascript
+			``` javascript
+			let add = (x) => (y) => {return x + y}; -- ECMAScript 6
+			let add = (x) => (y) => x + y; -- firefox only
+			inc = add(1);
+			inc(4); // 5
+			add(4)(1); // 5
+			```
+			Coffeescript
+			``` coffeescript
+			add = (x) -> (y) -> x + y
+			inc = add 1
+			inc 4 # 5
+			add 4, 1 # 5
+			```
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррирование, общий случай
+			Haskell
+			``` haskell
+			curry :: ((a, b) -> c) -> a -> b -> c
+			curry f x y = f (x, y)
+
+			uncurry :: (a -> b -> c) -> ((a, b) -> c)
+			uncurry f p = f (fst p) (snd p)
+			```
+			Javascript
+			``` javascript
+			var curry = function(f) {
+			    return function(a) {
+				    return function(b) {
+					    return f(a,b);
+			        }
+			    }
+			}
+			```
+			А больше двух аргументов?
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррирование, общий случай
+			Livescript
+			``` javascript
+			function curry$(f, bound){
+			  var
+			    context,
+			    _curry = function(args) {
+			      return f.length > 1 ? function(){
+			        var params = args ? args.concat() : [];
+			          context = bound ? context || this : this;
+			          return params.push.apply(params, arguments) <
+			            f.length && arguments.length ?
+			              _curry.call(context, params) : f.apply(context, params);
+			      } : f;
+			    };
+			  return _curry();
+			}
+			```
+			я человек ленивый...
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррирование, общий случай
+
+			``` javascript
+			var curry = function(fun) {
+			  return function(a) { // возвращаем функцию от одного параметра
+			    if (fun.length == 1) {
+			      return fun.call(null, a);
+			    } else {
+			      return curry(fun.bind(null, a)); // рекурсия!
+			    }
+			  }
+			};
+
+			var sum4 = function(a, b, c, d) { return a + b + c + d; };
+
+			var csum4 = curry(sum4);
+
+			sum4(1,2,3,4); // 10
+			csum4(1)(2)(3)(4); // 10
+			```
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###каррирование, общий случай, выводы
+
+			- любая функция только от одного аргумента
+			- нативный вариант с частичной применимостью лучше
+
+			``` javascript
+			console.log(csum4.length); // 1
+			console.log(csum4(1).length); // 1
+			console.log(csum4(1)(2).length); // 1
+			console.log(csum4(1)(2)(3)(4).length); // undefined, это уже не функция
+
+			csum3 = csum4(0);
+			sum3 = sum4.bind(null, 0);
+			```
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###деструктивное присваивание, выводы
+			Haskell
+			``` haskell
+			[a, b] = [1, 3] -- a == 1, b == 3
+			[a, b] = [b, a] -- a == 3, b == 1
+			```
+			Javascript, ECMA-6
+			``` javascript
+			[a, b] = [1, 3] // a == 1, b == 3
+			[a, b] = [b, a] // a == 3, b == 1
+			```
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###ленивые вычисления
+			Haskell
+			``` haskell
+			fact 0 = 1
+			fact n = n * fact (n-1)
+			facts = fact [1..10000000] -- и ничего
+			take 5 facts
+			```
+			Javascript
+			``` javascript
+			var fact = function(n) {
+			  fact = n * fact(n-1);
+			};
+			fact10000000 = fact(10000000); // очень плохо
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	У каждого своё видение на ленивые вычисления
+	<br>
+	Я тоже вот свою библиотеку написал...
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###ленивые вычисления в yafl.js
+			бесконечные списки
+			Javascript
+			``` javascript
+			example();
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###ленивые вычисления
+			бесконечные списки
+			F#
+			``` fsharp
+			yield example
+			```
+			Javascript
+			``` javascript
+			yieldExample();
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		###Монады
+		Haskell
+		``` haskell
+		class Monad m where
+		(>>=) :: m a -> (a -> m b) -> m b
+		(>>) :: m a -> m b -> m b
+		return :: a -> m a
+		fail :: String -> m a
+		```
+		Законы монад
+		``` haskell
+		return a >>= k = k a
+		m >>= return = m
+		m >>= (\x -> k x >>= h) = (m >>= k) >>= h
+		```
+	</section>
+</section>
+
+<section>
+	У каждого своё видение монад на javascript / C# / etc.
+	<br>
+	Я тоже вот своё написал...
+</section>
+
+<section>
+	<section data-markdown>
+		###Монады
+
+		``` javascript
+		Array.prototype.bind = function(f) {
+			return Array.prototype.concat.apply([], this.map(f));
+		};
+
+		Array.prototype.bind = function(f) {return Array.prototype.concat.apply([], this.map(f));}; // суффиксная форма, "бинарная"
+
+		Array.prototype.return = function(x) {return [x];} // суффиксная форма
+		returnArray = function(x) {return [x];} // префиксная унарная
+
+		three = function(a){ return [a,a+1,a+2]; };
+
+		console.log( [1,2,3].bind(three)); // [ 1, 2, 3, 2, 3, 4, 3, 4, 5 ]
+
+		// x >== return === x
+		[1,2,3].bind(Array.prototype.return) // [1, 2, 3]
+		[1,2,3].bind(returnArray) // [1, 2, 3]
+
+		// (return x >>= f) = f x
+		var doubleElems = function(arr) {return arr.map(function(a){return a*2;}); };
+		var filterElems = function(arr) {return arr.filter(function(a){return a>3;}); };
+
+		(returnArray([1,2,3])).bind(doubleElems); // [2, 4, 6]
+		doubleElems([1,2,3]); // [2,4,6]
+
+		// ((x >>= f) >>= g) = (x >>= (\y -> f y >>= g))
+		[1,2,3].bind(three).bind(three); // [ 1, 2, 3, 2, 3, 4, 3, 4, 5, 2, 3, 4, 3, 4, 5, 4, 5, 6, 3, 4, 5, 4, 5, 6, 5, 6, 7 ]
+		[1,2,3].bind(function(y) { return three(y).bind(three); }); // [ 1, 2, 3, 2, 3, 4, 3, 4, 5, 2, 3, 4, 3, 4, 5, 4, 5, 6, 3, 4, 5, 4, 5, 6, 5, 6, 7 ]
+
+
+		// Maybe
+
+		var Maybe = function(value) {
+			if (value) {
+				this.value = value;
+			}
+		};
+
+		Maybe.prototype.bind = function(f) {
+			if (this.value) {
+				return f(this.value)
+			} else{
+				return Nothing;
+			}
+		};
+
+		var Nothing = new Maybe();
+
+		var Just1 = new Maybe(1); // new Maybe(1) instanceof Maybe
+		var Just2 = new Maybe(2);
+
+		var add = function(mx, my) {
+			return mx.bind(function(x) {
+				return my.bind(function(y) {
+					return new Maybe(x + y);
+				});
 			});
+		};
+		```
+		<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
+	</section>
+</section>
 
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада List
+			Haskell
+			``` haskell
+			[1..3] >>= (\x -> [x, x+1, x+2]) -- [1,2,3,2,3,4,3,4,5]
+
+			(>>=) :: (Monad m) => m a -> (a -> m b) -> m b
+			xs >>= f = join (fmap f xs)
+			```
+			Coffeescript
+			???
+			<img style="position:absolute;right:0;top:0" src="img/ECMAScript.jpg">
 		</script>
+	</section>
+</section>
 
-	</body>
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада List
+			Coffeescript
+			``` coffeescript
+			Array.prototype.bind = (f) -> # суффиксная "бинарная" форма
+			  Array.prototype.concat.apply [], this.map f
+
+			returnArray = (x) -> # префиксная "унарная" форма
+			  [x]
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада List, проверка
+			Coffeescript
+			``` coffeescript
+			g = (x) -> [-x, x]
+			f = (x) -> [x, x+1, x+2]
+			[1..3].bind f # [ 1, 2, 3, 2, 3, 4, 3, 4, 5 ]
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада List, проверка
+			Coffeescript
+			``` coffeescript
+			## x >== return === x
+			[1..3].bind returnArray # [1, 2, 3]
+
+			## (return x >>= f) = f x
+			elemsX2 = (arr) ->
+			arr.map (   a) -> a * 2
+			filterElemsLET3 = (arr) ->
+			arr.filter (a) -> a > 3
+
+			(returnArray [1,2,3]).bind elemsX2 # [2, 4, 6]
+			elemsX2 [1,2    ,3] # [2,4,6]
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада List, проверка
+			Coffeescript
+			``` coffeescript
+			# ((x >>= f) >>= g) = (x >>= (\y -> f y >>= g))
+			([1..3].bind f).bind g # [ -1, 1, -2, 2, -3, 3, -2, 2, -3, 3, -4, 4, -3, 3, -4, 4, -5, 5 ]
+			[1..3].bind (y) -> (f y).bind g # [ -1, 1, -2, 2, -3, 3, -2, 2, -3, 3, -4, 4, -3, 3, -4, 4, -5, 5 ]
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада Maybe
+			Coffeescript
+			``` coffeescript
+			Maybe = (value) ->
+			@value = value if value
+
+			Nothing = new Maybe()
+
+			Maybe.prototype.bind = (f) ->
+			if @value
+			f @value
+			else
+			Nothing
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада Maybe
+			Coffeescript
+			``` coffeescript
+			Maybe = (value) ->
+			@value = value if value
+
+			Nothing = new Maybe()
+
+			Maybe.prototype.bind = (f) ->
+			if @value
+			f @value
+			else
+			Nothing
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Монада Maybe
+			Coffeescript
+			``` coffeescript
+			Just1 = new Maybe(1); # new Maybe(1) instanceof Maybe
+			Just2 = new Maybe(2);
+
+			add = (mx, my) -> # Wikipedia
+			  mx.bind (x) ->
+			    my.bind (y) ->
+			      new Maybe(x + y)
+
+			add Just1, Just2 # { value: 3 }
+			add Nothing, Just2 # {}
+			add Just1, Nothing # {}
+			(add Just1, Just2) instanceof Maybe # true
+			(add Just1, Nothing) instanceof Maybe # true
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<h3>Монады: вывод</h3>
+	<ul>
+		<li>I/O операции</li>
+		<li>ajax</li>
+		<li>Promises</li>
+	</ul>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Сопоставление с образцом
+			Livescript
+			``` livescript
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Пайпинг как в F#
+			Livescript
+			``` livescript
+			```
+		</script>
+	</section>
+</section>
+
+<section>
+	<h2>FIN!</h2>
+	<ul>
+		<li>link to my github</li>
+		<li>link to my YAFL github</li>
+		<li>link to Monads-Gonads</li>
+		<li>link to reveal.js</li>
+	</ul>
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+	// Full list of configuration options available here:
+	// https://github.com/hakimel/reveal.js#configuration
+	Reveal.initialize({
+		controls: true,
+		progress: true,
+		history: true,
+		center: true,
+
+		theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+		transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+		// Optional libraries used to extend on reveal.js
+		dependencies: [
+			{ src: 'lib/js/classList.js', condition: function () {
+				return !document.body.classList;
+			} },
+			{ src: 'plugin/markdown/showdown.js', condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			} },
+			{ src: 'plugin/markdown/markdown.js', condition: function () {
+				return !!document.querySelector('[data-markdown]');
+			} },
+			{ src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+				hljs.initHighlightingOnLoad();
+			} },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+				return !!document.body.classList;
+			} },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function () {
+				return !!document.body.classList;
+			} }
+			// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+			// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+		]
+	});
+
+</script>
+
+</body>
 </html>

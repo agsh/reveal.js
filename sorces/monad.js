@@ -55,7 +55,7 @@ returnArray = function(x) {return [x];} // префиксная унарная
 
 three = function(a){ return [a,a+1,a+2]; };
 
-console.log( [1,2,3].bind(three)); [ 1, 2, 3, 2, 3, 4, 3, 4, 5 ]
+console.log( [1,2,3].bind(three)); // [ 1, 2, 3, 2, 3, 4, 3, 4, 5 ]
 
 
 // x >== return === x
@@ -88,7 +88,7 @@ Maybe.prototype.bind = function(f) {
 	} else{
 		return Nothing;
 	}
-}
+};
 
 var Nothing = new Maybe();
 
