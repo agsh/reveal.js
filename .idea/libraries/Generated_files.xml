@@ -3,10 +3,12 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/sorces/curring.js" />
+        <item url="file://$PROJECT_DIR$/sorces/monad-maybe.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/sorces/curring.js" />
+      <root url="file://$PROJECT_DIR$/sorces/monad-maybe.js" />
     </CLASSES>
     <SOURCES />
   </library>

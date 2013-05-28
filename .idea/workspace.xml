@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68daa4db-44a9-4c51-b87e-d75d69a2340d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ECMA.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ECMAScript.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ECMAl.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/ECMAl.xcf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/STOP.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/STOP.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/reduce.hs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/sorces/monad-maybe.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plan" afterPath="$PROJECT_DIR$/plan" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/zoom-js/zoom.js" afterPath="$PROJECT_DIR$/plugin/zoom-js/zoom.js" />
     </list>
     <ignored path="reveal.js.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369672695081" ignored="false" />
+    <file path="/Dummy.txt" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369741184481" ignored="false" />
     <file path="$PROJECT_DIR$/../boobst/package.json" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368535813444" ignored="false" />
     <file path="$PROJECT_DIR$/../boobst/test/test.set.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368534648615" ignored="false" />
     <file path="/test.set.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367841013915" ignored="false" />
-    <file path="/index.html" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369323739116" ignored="false" />
+    <file path="/index.html" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369757313315" ignored="false" />
     <file path="/dummy.xml" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1367920774091" ignored="false" />
     <file path="/plan" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368729817492" ignored="false" />
     <file path="$PROJECT_DIR$/../boobst/boobst.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1368535804003" ignored="false" />
@@ -43,6 +38,7 @@
     <file path="/monad.js" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369411760620" ignored="false" />
     <file path="$PROJECT_DIR$/../upg/upg/cdcom/findRubricsWithoutName.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369387216357" ignored="false" />
     <file path="/findRubricsWithoutName.coffee" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369387214444" ignored="false" />
+    <file path="/a.dummy" changelist="68daa4db-44a9-4c51-b87e-d75d69a2340d" time="1369758007036" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,58 +58,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="reveal.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/reveal.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="96" column="8" selection-start="2487" selection-end="2487" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="436" column="20" selection-start="9910" selection-end="9910" vertical-scroll-proportion="0.67902666">
+            <state line="441" column="42" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.57259">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="monad.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/monad.js">
+      <file leaf-file-name="zoom.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/zoom-js/zoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="2" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1369645570046" expanded="true" signature="97:127" placeholder="{...}" />
-                <marker date="1369645570046" expanded="true" signature="169:178" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="reduce.hs" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/reduce.hs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="22" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lexical.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/lexical.js">
+      <file leaf-file-name="monad-cs.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/monad-cs.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="59" selection-end="162" vertical-scroll-proportion="0.0">
+            <state line="52" column="44" selection-start="767" selection-end="1233" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curring.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/curring.js">
+      <file leaf-file-name="monad-maybe.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/monad-maybe.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="27" column="51" selection-start="583" selection-end="620" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eval.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/eval.js">
+      <file leaf-file-name="monad-maybe.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/monad-maybe.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+            <state line="2" column="0" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,20 +121,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="curring.coffee" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
+      <file leaf-file-name="lexical.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/lexical.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+            <state line="4" column="0" selection-start="59" selection-end="162" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plan" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plan">
+      <file leaf-file-name="reduce.hs" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/reduce.hs">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="19" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="monad.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sorces/monad.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="2" selection-start="179" selection-end="179" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1369645570046" expanded="true" signature="97:127" placeholder="{...}" />
+                <marker date="1369645570046" expanded="true" signature="169:178" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -176,14 +181,17 @@
         <option value="$PROJECT_DIR$/sorces/reduce.js" />
         <option value="$PROJECT_DIR$/sorces/monad.js" />
         <option value="$PROJECT_DIR$/plan" />
+        <option value="$PROJECT_DIR$/sorces/monad-maybe.coffee" />
+        <option value="$PROJECT_DIR$/plugin/zoom-js/zoom.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="48" />
-    <option name="width" value="1920" />
-    <option name="height" value="1032" />
+    <option name="x" value="-1" />
+    <option name="y" value="25" />
+    <option name="width" value="1922" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -236,6 +244,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,26 +287,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="sorces" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="monad-maybe.coffee" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reveal.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="reveal.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="settings" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sorces/monad.js" />
+    <property name="options.lastSelected" value="settings" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sorces/monad-maybe.coffee" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Node.js.monad.js">
+  <component name="RunManager" selected="Node.js.monad-maybe.coffee">
     <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -326,9 +352,15 @@
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="false" name="monad-maybe.coffee" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/bin/node" path-to-js-file="sorces/monad-maybe.coffee" working-dir="$PROJECT_DIR$" coffeescript-path="/usr/bin/coffee" coffeescript-run="true">
+      <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.run" />
+      <method />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Node.js.lexical.js" />
       <item index="1" class="java.lang.String" itemvalue="Node.js.monad.js" />
+      <item index="2" class="java.lang.String" itemvalue="Node.js.monad-maybe.coffee" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -358,18 +390,22 @@
       <created>1369412998870</created>
       <updated>1369412998870</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="index">
+      <created>1369672734906</created>
+      <updated>1369672734906</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="48" width="1920" height="1032" extended-state="6" />
+    <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17343174" sideWeight="0.67103827" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17343174" sideWeight="0.67031765" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32968238" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -378,7 +414,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -449,41 +485,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plan">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="12" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorces/curring.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="12" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sorces/curring.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sorces/eval.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
@@ -553,9 +554,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/monad-cs.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="44" selection-start="767" selection-end="1233" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/monad-maybe.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="51" selection-start="583" selection-end="620" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sorces/monad-maybe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="49" selection-end="49" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin/zoom-js/zoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="22" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/reveal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="8" selection-start="2487" selection-end="2487" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="436" column="20" selection-start="9910" selection-end="9910" vertical-scroll-proportion="0.67902666">
+        <state line="441" column="42" selection-start="9983" selection-end="9983" vertical-scroll-proportion="0.57259">
           <folding />
         </state>
       </provider>

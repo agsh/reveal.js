@@ -51,18 +51,20 @@
 	<h3>история</h3>
 	<p>
 		<script>
-			document.write((new Date(1995, 4, 4)).toString());
+			document.write((new Date(1995, 8, 1)).toString());
 		</script>
 	</p>
 	<p>Брендан Айк, Netscape.</p>
-	<p>Может называть javascript javascript'ом, а не ECMAscript'ом</p>
+	<p>Может называть javascript javascript'ом</p>
+	<br>
 	<p>
 		<script>
 			document.write(new Date(1996, 1, 1).toString());
 		</script>
 	</p>
-	<p>JScript, Microsoft</p>
-	<p>javascript - Oracle</p>
+	<p>jscript - Microsoft</p>
+	<p>javascript - Netscape</p>
+	<p>ecmascript</p>
 </section>
 <!--
 изначально скриптовый
@@ -72,6 +74,25 @@
 все ли пишут на C# 1.0?
 -->
 <section>
+	<h3>история</h3>
+	<p>
+		<script>
+			document.write((new Date(1999, 11, 1)).toString());
+		</script>
+	</p>
+	<p>ECMAScript 3.</p>
+	<br>
+	<p>
+		<script>
+			document.write(new Date(2011, 5, 1).toString());
+		</script>
+	</p>
+	<p>ECMAScript 5.</p>
+	<br>
+	<p>???</p>
+	<p>ECMAScript 6.</p>
+</section>
+<section>
 	<a href="http://www.haskell.org/haskellwiki/The_JavaScript_Problem">http://www.haskell.org/haskellwiki/The_JavaScript_Problem</a>
 
 	<h3>JavaScript sucks.</h3>
@@ -80,6 +101,7 @@
 		<li>слабая типизация</li>
 		<li>многословный синтаксис функций</li>
 		<li>позднее связывание. IDE x_x</li>
+		<li>странный this</li>
 		<li>неадекватное сравнение. <a href="http://www.youtube.com/watch?v=kXEgk1Hdze0">WAT?</a></li>
 		<li>однопоточный</li>
 		<li class="fragment">но функциональный</li>
@@ -147,7 +169,7 @@
 <section>
 	<section data-markdown>
 		<h3>ФВП</h3>
-		Массивы (списки)
+		Массивы (списки) ECMAScript5
 		<ul>
 			<li>.forEach</li>
 			<li>.every</li>
@@ -383,7 +405,7 @@
 			``` haskell
 			fact 0 = 1
 			fact n = n * fact (n-1)
-			facts = fact [1..10000000] -- и ничего
+			facts = map fact [1..10000000] -- и ничего
 			take 5 facts
 			```
 			Javascript
@@ -411,16 +433,19 @@
 			Javascript
 			``` javascript
 			var data = ["Максим", "Вера", "Дарья", "Иван", "Денис", "Алексей"];
+
 			_.return(data)
-			.zipWith(
-				function(name, pos) {
-					return pos + ') ' + name;
-				},
-				_.return('[1,1..]')
-			)
-			.toArray();
+			    .zipWith(
+			        function(name, pos) {
+			            return pos + ') ' + name;
+			        },
+			        _.return('[1,1..]')
+			    )
+			    .toArray();
 			```
-			["1) Максим", "2) Вера", "3) Дарья", "4) Иван", "5) Денис", "6) Алексей"]
+			["1) Максим", "2) Вера", "3) Дарья",
+
+			"4) Иван", "5) Денис", "6) Алексей"]
 		</script>
 	</section>
 </section>
@@ -430,17 +455,55 @@
 		<script type="text/template">
 			###ленивые вычисления
 			бесконечные списки
+			Haskell
+			``` haskell
+			ones = 1 : ones
+			```
 			F#
 			``` fsharp
-			let rec fibs =
-				seq { yield 0
-					yield! Seq.scan (+) 1 fibs  }
-
-			Seq.take 5 fibs |> List.ofSeq
+			let rec ones = seq {yield 1; yield! ones}
 			```
-			Javascript
+			Javascript 1.7
 			``` javascript
-			yieldExample();
+			function ones() {
+			  while (true) {
+			    yield 1;
+			  }
+			}
+
+			var g = ones();
+			for (var i = 0; i < 10; i++) {
+			  console.log(g.next());
+			}
+			```
+			<img style="position:absolute;right:0;top:0;border:0" src="img/ECMAl.png">
+		</script>
+	</section>
+</section>
+
+<section>
+	<section data-markdown>
+		<script type="text/template">
+			###Определители списков
+			Haskell
+			``` haskell
+			[x | x <- [0..11], mod x 2 == 0] -- [0, 2, 4, 6, 8, 10]
+			```
+
+			F#
+			``` fsharp
+			[for x in [0..11] do if x % 2 = 0 then yield x]
+			```
+
+			Javascript 1.7
+			```javascript
+			function range(begin, end) {
+				for (let i = begin; i < end; ++i) {
+					yield i;
+				}
+			};
+			[i for each (i in range(0, 11)) if (i % 2 == 0)];
+			// [0, 2, 4, 6, 8, 10]
 			```
 			<img style="position:absolute;right:0;top:0;border:0" src="img/ECMAl.png">
 		</script>
@@ -553,7 +616,6 @@
 			```
 			Coffeescript
 			???
-			<img style="position:absolute;right:0;top:0;border:0" src="img/ECMAl.png">
 		</script>
 	</section>
 </section>
@@ -656,27 +718,6 @@
 			###Монада Maybe
 			Coffeescript
 			``` coffeescript
-			Maybe = (value) ->
-			    @value = value if value
-
-			Nothing = new Maybe()
-
-			Maybe.prototype.bind = (f) ->
-			    if @value
-			        f @value
-			    else
-			        Nothing
-			```
-		</script>
-	</section>
-</section>
-
-<section>
-	<section data-markdown>
-		<script type="text/template">
-			###Монада Maybe
-			Coffeescript
-			``` coffeescript
 			Just1 = new Maybe(1); # new Maybe(1) instanceof Maybe
 			Just2 = new Maybe(2);
 
@@ -690,6 +731,12 @@
 			add Just1, Nothing # {}
 			(add Just1, Just2) instanceof Maybe # true
 			(add Just1, Nothing) instanceof Maybe # true
+			```
+			Построение цепочек вычисления
+
+			``` coffeescript
+			add (add Just1, Just2), Just2 # { value: 5 }
+			add (add Just1, Nothing), Just2 # {}
 			```
 		</script>
 	</section>
@@ -709,6 +756,7 @@
 		<script type="text/template">
 			###Сопоставление с образцом
 			Livescript
+
 			В livescript есть Prelude.ls!
 			``` livescript
 			take = (n, [x, ...xs]:list) -->
@@ -749,15 +797,16 @@
 	</section>
 </section>
 
-<section>
+<section data-state="alert">
 	<h2>FIN!</h2>
-	<ul>
-		<li>link to my github</li>
-		<li>link to my YAFL github</li>
-		<li>link to Monads-Gonads</li>
-		<li>link to reveal.js</li>
-		<li>http://livescript.net/</li>
-	</ul>
+	<h3>javascript livescript typescript coffeescript</h3>
+	    <table>
+		<tr><td>slides:</td><td><a href="http://fpjs.eu01.aws.af.cm/">http://fpjs.eu01.aws.af.cm/</a></td></tr>
+		<tr><td>github:</td><td>agsh</td></tr>
+		<tr><td>habrahabr:</td><td>agsh</td></tr>
+		<tr><td>YAFL:</td><td><a href="https://github.com/agsh/yafl">https://github.com/agsh/yafl</a></td></tr>
+		<tr><td>reveal:</td><td><a href="https://github.com/hakimel/reveal.js">https://github.com/hakimel/reveal.js</a></td></tr>
+		</table>
 </section>
 
 </div>
@@ -772,6 +821,8 @@
 	// Full list of configuration options available here:
 	// https://github.com/hakimel/reveal.js#configuration
 	Reveal.initialize({
+		//width: 960,
+		//height: 700,
 		controls: true,
 		progress: true,
 		history: true,
@@ -794,9 +845,9 @@
 			{ src: 'plugin/highlight/highlight.js', async: true, callback: function () {
 				hljs.initHighlightingOnLoad();
 			} },
-			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+			/*{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
 				return !!document.body.classList;
-			} },
+			} },*/
 			{ src: 'plugin/notes/notes.js', async: true, condition: function () {
 				return !!document.body.classList;
 			} }
